@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Nikhiel Lingard — Backend Engineer in Progress</title>
+
+  <meta
+    name="description"
+    content="Portfolio of Nikhiel Lingard — backend engineer in progress, based in Paramaribo, Suriname."
+  />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,350;0,9..144,480;0,9..144,560;1,9..144,400&family=Archivo:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="icon" type="image/png" href="./img/favicon.png">
+  <link rel="icon" href="./img/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="./img/favicon.png">
+
+  <meta name="theme-color" content="#2F8F7A">
+
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <!-- Atmosphere -->
+  <div class="bg"></div>
+  <div class="mist"></div>
+  <div class="grain"></div>
+  <div class="scanlines"></div>
+
+  <!-- ========================================================
+       NAVIGATION
+       ======================================================== -->
+
+  <header class="top-panel" id="top-panel">
+
+    <a href="./index.html" class="wordmark" aria-label="Go to homepage">
+      <span class="dot"></span>
+      Nikhiel Lingard
+    </a>
+
+    <nav class="links">
+      <a href="index.html" class="active">Home</a>
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="socials">
+      <a
+        href="https://github.com/Nikhcodes/"
+        target="_blank"
+        rel="noopener"
+      >
+        GitHub
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/nikhiel-lingard/"
+        target="_blank"
+        rel="noopener"
+      >
+        LinkedIn
+      </a>
+    </div>
+
+    <button
+      class="nav-toggle"
+      id="nav-toggle"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+    </button>
+
+  </header>
+
+
+  <!-- ========================================================
+       MAIN
+       ======================================================== -->
+
+  <main>
+
+    <!-- ======================================================
+         HERO
+         ====================================================== -->
+
+    <section class="hero">
+
+      <p class="hero-eyebrow">
+        Field Recording — Side A
+      </p>
+
+      <h1 class="hero-title">
+        Nikhiel <em>Lingard</em>
+      </h1>
+
+      <div class="hero-stage">
+
+        <!-- Music -->
+        <audio id="bg-music" loop preload="metadata">
+          <source src="music/music1.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- Floating notes -->
+        <div class="music-notes" aria-hidden="true">
+          <span class="note">♪</span>
+          <span class="note">♫</span>
+          <span class="note">♩</span>
+          <span class="note">♪</span>
+          <span class="note">♫</span>
+        </div>
+
+        <!-- Left waveform -->
+        <div class="wave left" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- Portrait -->
+        <div class="hero-frame">
+          <div
+            class="hero-image"
+            role="button"
+            tabindex="0"
+            aria-label="Play or pause music. Double click to change track."
+          ></div>
+        </div>
+
+        <!-- Right waveform -->
+        <div class="wave right" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+      </div>
+
+
+      <!-- Frequency indicator -->
+      <div class="freq-indicator">
+
+        <span class="freq-label">
+          FREQ
+        </span>
+
+        <span
+          class="freq-value"
+          id="freq-value"
+        >
+          01 / 03
+        </span>
+
+        <span class="freq-hint">
+          dbl click → retune
+        </span>
+
+      </div>
+
+
+      <p class="hero-sub">
+        Backend engineer in progress, recording signal from
+        Paramaribo, Suriname.
+      </p>
+
+
+      <a href="#transmission" class="scroll-cue">
+        <span class="line"></span>
+        Scroll
+      </a>
+
+    </section>
+
+
+    <!-- ======================================================
+         A1 — TRANSMISSION
+         ====================================================== -->
+
+    <section
+      class="reel-section reveal"
+      id="transmission"
+    >
+
+      <div class="reel-head">
+
+        <span class="reel-num">
+          A1
+        </span>
+
+        <h2 class="reel-title">
+          Transmission
+        </h2>
+
+        <span class="rule"></span>
+
+      </div>
+
+
+      <div class="intro-grid">
+
+        <div class="intro-copy">
+
+          <p>
+            I'm Nikhiel Lingard, a Software Engineering student
+            pursuing a BSc in Information Technology at UNASAT and
+            currently working as an IT Operator in the banking sector.
+          </p>
+
+          <p>
+            My interest in technology began with software development,
+            but over time I became increasingly interested in the systems
+            behind applications—the architecture, security, infrastructure,
+            and reliability that keep software running. Today my primary
+            focus is backend engineering with Java and Spring Boot.
+          </p>
+
+          <p>
+            I enjoy understanding how systems work beyond the surface
+            level, whether that's designing APIs, implementing authentication
+            and authorization, working with databases, or studying software
+            security principles.
+          </p>
+
+        </div>
+
+
+        <div class="current-status">
+
+          <p class="role-label">
+            Currently
+          </p>
+
+          <div class="chip-row">
+
+            <span class="chip is-tape">
+              IT Operator
+            </span>
+
+            <span class="chip">
+              Backend Engineering
+            </span>
+
+            <span class="chip is-tape">
+              BSc IT @ UNASAT
+            </span>
+
+            <span class="chip">
+              Open to Internships
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ======================================================
+         A2 — SESSIONS
+         ====================================================== -->
+
+    <section
+      class="reel-section reveal"
+      id="sessions"
+    >
+
+      <div class="reel-head">
+
+        <span class="reel-num">
+          A2
+        </span>
+
+        <h2 class="reel-title">
+          Sessions
+        </h2>
+
+        <span class="rule"></span>
+
+      </div>
+
+      <p class="reel-lede">
+        Recent work experience
+      </p>
+
+
+      <!-- Experience 01 -->
+
+      <div class="session-row">
+
+        <span class="session-code">
+          01
+        </span>
+
+        <div>
+
+          <h3 class="session-role">
+            IT Operator
+          </h3>
+
+          <p class="session-org">
+            Banking Sector
+          </p>
+
+          <p class="session-desc">
+            Supporting daily IT operations, monitoring systems,
+            assisting with operational continuity, and working
+            within enterprise technology environments.
+          </p>
+
+        </div>
+
+        <span class="session-meta">
+          2026 — Present
+        </span>
+
+      </div>
+
+
+      <!-- Experience 02 -->
+
+      <div class="session-row">
+
+        <span class="session-code">
+          02
+        </span>
+
+        <div>
+
+          <h3 class="session-role">
+            Data Entry Operator
+          </h3>
+
+          <p class="session-org">
+            Professional Experience
+          </p>
+
+          <p class="session-desc">
+            Managed operational data with a strong focus on
+            accuracy, consistency, and structured business processes.
+          </p>
+
+        </div>
+
+        <span class="session-meta">
+          2025 — 2026
+        </span>
+
+      </div>
+
+
+      <!-- Experience 03 -->
+
+      <div class="session-row">
+
+        <span class="session-code">
+          03
+        </span>
+
+        <div>
+
+          <h3 class="session-role">
+            Junior Network Technician
+          </h3>
+
+          <p class="session-org">
+            Technical Support
+          </p>
+
+          <p class="session-desc">
+            Assisted with network infrastructure maintenance,
+            troubleshooting, and technical support while building
+            practical networking fundamentals.
+          </p>
+
+        </div>
+
+        <span class="session-meta">
+          2024 — 2025
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- ======================================================
+         A3 — RECORDINGS
+         ====================================================== -->
+
+    <section
+      class="reel-section reveal"
+      id="recordings"
+    >
+
+      <div class="reel-head">
+
+        <span class="reel-num">
+          A3
+        </span>
+
+        <h2 class="reel-title">
+          Recordings
+        </h2>
+
+        <span class="rule"></span>
+
+      </div>
+
+      <p class="reel-lede">
+        Recent projects &amp; achievements
+      </p>
+
+
+      <div class="project-grid">
+
+
+        <!-- RigSight -->
+
+        <article class="project-card">
+
+          <div class="project-thumb">
+            <img
+              src="img/rigsight.jpg"
+              alt="RigSight project"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="project-top">
+
+            <h3 class="project-title">
+              RigSight
+            </h3>
+
+            <a
+              href="work.html"
+              class="project-link"
+            >
+              View →
+            </a>
+
+          </div>
+
+          <p class="project-desc">
+            A backend monitoring platform that simulates industrial
+            telemetry, equipment state transitions, and alerting
+            systems using Java, Spring Boot, JWT authentication,
+            and PostgreSQL.
+          </p>
+
+          <div class="project-stack">
+
+            <span>Java</span>
+            <span>Spring Boot</span>
+            <span>JWT</span>
+            <span>PostgreSQL</span>
+
+          </div>
+
+        </article>
+
+
+        <!-- NikhOS -->
+
+        <article class="project-card">
+
+          <div class="project-thumb">
+            <img
+              src="img/nikhos.jpg"
+              alt="NikhOS project"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="project-top">
+
+            <h3 class="project-title">
+              NikhOS
+            </h3>
+
+            <a
+              href="work.html"
+              class="project-link"
+            >
+              View →
+            </a>
+
+          </div>
+
+          <p class="project-desc">
+            A lightweight student dashboard designed as a Progressive
+            Web App with offline support, local-first functionality,
+            and a clean desktop-inspired interface.
+          </p>
+
+          <div class="project-stack">
+
+            <span>JavaScript</span>
+            <span>React</span>
+            <span>Vite</span>
+            <span>PWA</span>
+            <span>Tailwind v4</span>
+
+          </div>
+
+        </article>
+
+
+        <!-- Pose Cam -->
+
+        <article class="project-card">
+
+          <div class="project-thumb">
+            <img
+              src="img/posecam.jpg"
+              alt="Pose Cam project"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="project-top">
+
+            <h3 class="project-title">
+              Pose Cam
+            </h3>
+
+            <a
+              href="work.html"
+              class="project-link"
+            >
+              View →
+            </a>
+
+          </div>
+
+          <p class="project-desc">
+            Real-time hand gesture detection built with MediaPipe
+            and OpenCV. Tracks hand landmarks, recognizes custom
+            poses, and instantly triggers visual overlays while
+            enhancing webcam footage with automatic image processing.
+          </p>
+
+          <div class="project-stack">
+
+            <span>Python</span>
+            <span>MediaPipe</span>
+            <span>OpenCV</span>
+            <span>NumPy</span>
+            <span>Computer Vision</span>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+      <a
+        href="work.html"
+        class="view-all"
+      >
+        View all work →
+      </a>
+
+    </section>
+
+
+    <!-- ======================================================
+         B1 — INSTRUMENTS
+         ====================================================== -->
+
+    <section
+      class="reel-section reveal"
+      id="instruments"
+    >
+
+      <div class="reel-head">
+
+        <span class="reel-num">
+          B1
+        </span>
+
+        <h2 class="reel-title">
+          Instruments
+        </h2>
+
+        <span class="rule"></span>
+
+      </div>
+
+
+      <div class="skill-group">
+
+        <h4>
+          Languages
+        </h4>
+
+        <div class="chip-row">
+
+          <span class="chip">Python</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">Java</span>
+          <span class="chip">SQL</span>
+
+        </div>
+
+      </div>
+
+
+      <div class="skill-group">
+
+        <h4>
+          Tools &amp; Frameworks
+        </h4>
+
+        <div class="chip-row">
+
+          <span class="chip">Node.js</span>
+          <span class="chip">Flask</span>
+          <span class="chip">Git</span>
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">Docker</span>
+          <span class="chip">Spring Boot</span>
+          <span class="chip">JWT</span>
+          <span class="chip">Linux</span>
+
+        </div>
+
+      </div>
+
+
+      <div class="skill-group">
+
+        <h4>
+          Currently Learning
+        </h4>
+
+        <div class="chip-row">
+
+          <span class="chip is-tape">
+            System Design
+          </span>
+
+          <span class="chip is-tape">
+            REST APIs
+          </span>
+
+          <span class="chip is-tape">
+            Software Security
+          </span>
+
+          <span class="chip is-tape">
+            Cloud Fundamentals
+          </span>
+
+          <span class="chip is-tape">
+            Testing &amp; CI/CD
+          </span>
+
+          <span class="chip is-tape">
+            Data Structures &amp; Algorithms
+          </span>
+
+          <span class="chip is-tape">
+            AWS
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ========================================================
+       FOOTER
+       ======================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <p class="footer-brand">
+          Nikhiel Lingard
+        </p>
+
+        <p class="footer-tagline">
+          Backend engineer in progress, recording signal from
+          Paramaribo, Suriname.
+        </p>
+
+        <a
+          href="contact.html"
+          class="footer-cta"
+        >
+          Start a conversation →
+        </a>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h5>
+          Site
+        </h5>
+
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h5>
+          Elsewhere
+        </h5>
+
+        <a
+          href="https://github.com/Nikhcodes/"
+          target="_blank"
+          rel="noopener"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/nikhiel-lingard/"
+          target="_blank"
+          rel="noopener"
+        >
+          LinkedIn
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-fine">
+
+      <span>
+        © 2026 Nikhiel Lingard
+      </span>
+
+      <span>
+        Side A — End of Reel
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>

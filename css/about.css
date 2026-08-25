@@ -1,0 +1,1552 @@
+/* ============================================================
+   ABOUT — SIDE C / LINER NOTES
+   Nikhiel Lingard
+   ============================================================ */
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.about-hero {
+
+  position: relative;
+  z-index: 5;
+
+  min-height: 78vh;
+
+  max-width: var(--content-w);
+
+  margin: 0 auto;
+
+  padding:
+    calc(var(--nav-h) + 85px)
+    var(--gutter)
+    90px;
+
+  display: grid;
+
+  grid-template-columns: 42px 1fr 110px;
+
+  gap: 34px;
+
+  align-items: center;
+
+  overflow: hidden;
+
+}
+
+
+/* ============================================================
+   SPINE
+   ============================================================ */
+
+.about-spine {
+
+  height: 300px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  writing-mode: vertical-rl;
+
+  transform: rotate(180deg);
+
+  font-family: var(--f-mono);
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  color: var(--ink-faint);
+
+}
+
+.about-spine span:first-child {
+
+  color: var(--tape);
+
+}
+
+
+/* ============================================================
+   HERO MAIN
+   ============================================================ */
+
+.about-hero-main {
+
+  position: relative;
+
+}
+
+.about-meta {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 28px;
+
+  font-family: var(--f-mono);
+
+  font-size: 9px;
+
+  letter-spacing: 1.7px;
+
+  color: var(--ink-faint);
+
+}
+
+.about-meta-rule {
+
+  width: 52px;
+
+  height: 1px;
+
+  background: var(--line-strong);
+
+}
+
+
+/* ============================================================
+   TITLE
+   ============================================================ */
+
+.about-title {
+
+  margin: 0;
+
+  max-width: 10ch;
+
+  font-family: var(--f-display);
+
+  font-size: clamp(4rem, 8vw, 7.5rem);
+
+  font-weight: 480;
+
+  line-height: .84;
+
+  letter-spacing: -.055em;
+
+}
+
+.about-title span {
+
+  display: block;
+
+  margin-left: clamp(15px, 5vw, 70px);
+
+}
+
+.about-title em {
+
+  display: block;
+
+  color: var(--tape);
+
+  font-style: italic;
+
+  margin-left: clamp(40px, 9vw, 135px);
+
+}
+
+
+/* ============================================================
+   INTRO
+   ============================================================ */
+
+.about-intro-row {
+
+  display: grid;
+
+  grid-template-columns: minmax(230px, 520px) 65px;
+
+  gap: 30px;
+
+  align-items: end;
+
+  margin-top: 45px;
+
+}
+
+.about-intro {
+
+  margin: 0;
+
+  color: var(--ink-soft);
+
+  font-size: 14px;
+
+  line-height: 1.65;
+
+}
+
+
+/* ============================================================
+   STAMP
+   ============================================================ */
+
+.about-stamp {
+
+  width: 62px;
+  height: 62px;
+
+  border: 1px solid var(--line-strong);
+
+  border-radius: 50%;
+
+  display: grid;
+
+  place-items: center;
+
+  transform: rotate(-8deg);
+
+}
+
+.stamp-inner {
+
+  width: 43px;
+  height: 43px;
+
+  border: 1px dashed var(--line-strong);
+
+  border-radius: 50%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+}
+
+.stamp-inner span {
+
+  font-family: var(--f-display);
+
+  font-size: 17px;
+
+  font-style: italic;
+
+}
+
+.stamp-inner small {
+
+  margin-top: 2px;
+
+  font-family: var(--f-mono);
+
+  font-size: 5px;
+
+  letter-spacing: 1px;
+
+  color: var(--ink-faint);
+
+}
+
+
+/* ============================================================
+   SIGNATURE
+   ============================================================ */
+
+/*
+   IMPORTANT:
+
+   The signature itself stays still.
+
+   The OUTER orbit spins.
+
+   This gives you a visual signature without making
+   the "NL" letters constantly rotate.
+*/
+
+.signature-wrap {
+
+  position: relative;
+
+  width: 100px;
+
+  height: 100px;
+
+  display: grid;
+
+  place-items: center;
+
+  transform: rotate(7deg);
+
+}
+
+
+/* outer rotating ring */
+
+.signature-orbit {
+
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  animation: signatureOrbit 16s linear infinite;
+
+}
+
+
+/*
+   We use a pseudo-element as the orbit ring.
+*/
+
+.signature-orbit::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 3px;
+
+  border: 1px dashed var(--line-strong);
+
+  border-radius: 50%;
+
+}
+
+
+/*
+   The text sits around the signature.
+
+   It intentionally isn't perfectly legible at every
+   angle — that's part of the record-label aesthetic.
+*/
+
+.signature-orbit span {
+
+  position: absolute;
+
+  top: -2px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 100px;
+
+  text-align: center;
+
+  white-space: nowrap;
+
+  font-family: var(--f-mono);
+
+  font-size: 5px;
+
+  letter-spacing: 1.7px;
+
+  color: var(--ink-faint);
+
+}
+
+
+/* static inner ring */
+
+.signature-ring {
+
+  position: absolute;
+
+  width: 70px;
+  height: 70px;
+
+  border: 1px solid var(--line-strong);
+
+  border-radius: 50%;
+
+}
+
+
+/* little secondary dashed ring */
+
+.signature-ring::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 6px;
+
+  border: 1px dashed var(--line);
+
+  border-radius: 50%;
+
+}
+
+
+/* center */
+
+.signature-core {
+
+  position: relative;
+
+  z-index: 3;
+
+  width: 56px;
+  height: 56px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: var(--paper);
+
+}
+
+
+/* text */
+
+.signature-label {
+
+  font-family: var(--f-mono);
+
+  font-size: 5px;
+
+  letter-spacing: 1.5px;
+
+  color: var(--ink-faint);
+
+}
+
+.signature-name {
+
+  margin-top: 3px;
+
+  font-family: var(--f-display);
+
+  font-size: 28px;
+
+  font-style: italic;
+
+  line-height: .8;
+
+  color: var(--ink);
+
+}
+
+.signature-year {
+
+  margin-top: 5px;
+
+  font-family: var(--f-mono);
+
+  font-size: 6px;
+
+  color: var(--tape);
+
+}
+
+
+/* rotating tape dot */
+
+.signature-dot {
+
+  position: absolute;
+
+  z-index: 5;
+
+  width: 7px;
+  height: 7px;
+
+  top: 1px;
+  right: 10px;
+
+  border-radius: 50%;
+
+  background: var(--tape);
+
+  box-shadow: 0 0 0 3px var(--paper);
+
+  animation: signatureDot 16s linear infinite;
+
+}
+
+
+/* ============================================================
+   SIGNATURE ANIMATIONS
+   ============================================================ */
+
+@keyframes signatureOrbit {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+@keyframes signatureDot {
+
+  from {
+    transform: rotate(0deg) translateX(46px) rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg) translateX(46px) rotate(-360deg);
+  }
+
+}
+
+
+/* ============================================================
+   GENERAL SECTION
+   ============================================================ */
+
+.about-section {
+
+  position: relative;
+
+  z-index: 5;
+
+  max-width: var(--content-w);
+
+  margin: 0 auto;
+
+  padding:
+    55px
+    var(--gutter)
+    100px;
+
+}
+
+
+/* ============================================================
+   SECTION HEADER
+   ============================================================ */
+
+.about-section-head {
+
+  display: grid;
+
+  grid-template-columns: auto 1fr auto;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 36px;
+
+  font-family: var(--f-mono);
+
+  font-size: 8px;
+
+  letter-spacing: 1.7px;
+
+  color: var(--ink-faint);
+
+}
+
+.about-section-id {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+}
+
+.about-section-id span {
+
+  color: var(--tape);
+
+  font-size: 11px;
+
+}
+
+.about-section-id strong {
+
+  font-weight: 400;
+
+}
+
+.about-section-rule {
+
+  height: 1px;
+
+  background: var(--line);
+
+}
+
+.about-section-code {
+
+  white-space: nowrap;
+
+}
+
+
+/* ============================================================
+   ORIGIN
+   ============================================================ */
+
+.origin-layout {
+
+  display: grid;
+
+  grid-template-columns: 150px 1fr;
+
+  gap: 50px;
+
+}
+
+.origin-label {
+
+  font-family: var(--f-mono);
+
+  font-size: 8px;
+
+  letter-spacing: 1.5px;
+
+  color: var(--ink-faint);
+
+}
+
+.origin-marker {
+
+  display: flex;
+
+  gap: 3px;
+
+  margin-top: 15px;
+
+}
+
+.origin-marker i {
+
+  width: 3px;
+
+  height: 18px;
+
+  background: var(--ink);
+
+}
+
+.origin-marker i:nth-child(2) {
+
+  height: 29px;
+
+  background: var(--tape);
+
+}
+
+.origin-marker i:nth-child(3) {
+
+  height: 12px;
+
+}
+
+
+/* ============================================================
+   COPY
+   ============================================================ */
+
+.about-copy {
+
+  max-width: 68ch;
+
+}
+
+.about-copy p {
+
+  margin: 0;
+
+  color: var(--ink-soft);
+
+  font-size: 15px;
+
+  line-height: 1.7;
+
+}
+
+.about-copy p + p {
+
+  margin-top: 20px;
+
+}
+
+.about-copy .copy-lead {
+
+  font-family: var(--f-display);
+
+  font-size: clamp(1.5rem, 2.4vw, 2.15rem);
+
+  line-height: 1.25;
+
+  color: var(--ink);
+
+}
+
+
+/* ============================================================
+   PHILOSOPHY
+   ============================================================ */
+
+.philosophy-layout {
+
+  display: grid;
+
+  grid-template-columns: 60px 1fr 220px;
+
+  gap: 25px;
+
+  align-items: stretch;
+
+}
+
+.philosophy-index {
+
+  font-family: var(--f-mono);
+
+  font-size: 11px;
+
+  color: var(--tape);
+
+  padding-top: 20px;
+
+}
+
+
+/* quote */
+
+.quote-panel {
+
+  position: relative;
+
+  min-height: 230px;
+
+  padding: 38px 42px;
+
+  border: 1px solid var(--line-strong);
+
+  background: rgba(255,255,255,.3);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+}
+
+.quote-panel::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 3px;
+
+  background: var(--tape);
+
+}
+
+.quote-mark {
+
+  position: absolute;
+
+  top: 16px;
+  left: 24px;
+
+  font-family: var(--f-display);
+
+  font-size: 70px;
+
+  line-height: 1;
+
+  color: var(--tape);
+
+  opacity: .3;
+
+}
+
+.quote-panel p {
+
+  position: relative;
+
+  max-width: 22ch;
+
+  margin: 0;
+
+  font-family: var(--f-display);
+
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+
+  line-height: 1.15;
+
+}
+
+.quote-footer {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-top: 30px;
+
+  padding-top: 14px;
+
+  border-top: 1px solid var(--line);
+
+  font-family: var(--f-mono);
+
+  font-size: 7px;
+
+  letter-spacing: 1.4px;
+
+  color: var(--ink-faint);
+
+}
+
+.quote-footer span:first-child {
+
+  color: var(--tape);
+
+}
+
+
+/* philosophy note */
+
+.philosophy-note {
+
+  padding: 20px;
+
+  border: 1px solid var(--line);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-end;
+
+}
+
+.philosophy-note span {
+
+  font-family: var(--f-mono);
+
+  font-size: 7px;
+
+  letter-spacing: 1.5px;
+
+  color: var(--ink-faint);
+
+}
+
+.philosophy-note p {
+
+  margin: 12px 0 0;
+
+  font-family: var(--f-display);
+
+  font-size: 18px;
+
+  line-height: 1.2;
+
+}
+
+
+/* ============================================================
+   TIMELINE
+   ============================================================ */
+
+.timeline {
+
+  position: relative;
+
+  margin-left: 150px;
+
+  border-left: 1px solid var(--line-strong);
+
+}
+
+.timeline-item {
+
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 110px 1fr;
+
+  gap: 35px;
+
+  padding: 28px 0 28px 35px;
+
+  border-bottom: 1px solid var(--line);
+
+  opacity: 0;
+
+  transform: translateY(18px);
+
+  transition:
+    opacity .6s ease,
+    transform .6s ease;
+
+}
+
+.timeline-item.is-visible {
+
+  opacity: 1;
+
+  transform: translateY(0);
+
+}
+
+.timeline-year {
+
+  position: relative;
+
+  font-family: var(--f-mono);
+
+  font-size: 11px;
+
+  color: var(--tape);
+
+}
+
+.timeline-year i {
+
+  position: absolute;
+
+  left: -41px;
+
+  top: 4px;
+
+  width: 10px;
+  height: 10px;
+
+  border: 1px solid var(--ink);
+
+  border-radius: 50%;
+
+  background: var(--paper);
+
+}
+
+.timeline-current .timeline-year i {
+
+  background: var(--tape);
+
+  border-color: var(--tape);
+
+}
+
+.timeline-content {
+
+  max-width: 55ch;
+
+}
+
+.timeline-index {
+
+  font-family: var(--f-mono);
+
+  font-size: 7px;
+
+  letter-spacing: 1.5px;
+
+  color: var(--ink-faint);
+
+}
+
+.timeline-content h3 {
+
+  margin: 7px 0 7px;
+
+  font-family: var(--f-display);
+
+  font-size: 23px;
+
+  font-weight: 480;
+
+}
+
+.timeline-content p {
+
+  margin: 0;
+
+  color: var(--ink-soft);
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+}
+
+
+/* ============================================================
+   BEYOND CODE
+   ============================================================ */
+
+.beyond-layout {
+
+  display: grid;
+
+  grid-template-columns: 1.2fr .8fr;
+
+  gap: 80px;
+
+  align-items: start;
+
+}
+
+.beyond-copy {
+
+  max-width: 52ch;
+
+}
+
+.beyond-lead {
+
+  margin: 0 0 20px;
+
+  font-family: var(--f-display);
+
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+
+  line-height: 1.15;
+
+}
+
+.beyond-copy p + p {
+
+  color: var(--ink-soft);
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+}
+
+
+/* ============================================================
+   INTERESTS
+   ============================================================ */
+
+.interest-list {
+
+  border-top: 1px solid var(--line-strong);
+
+}
+
+.interest {
+
+  display: grid;
+
+  grid-template-columns: 35px 1fr;
+
+  align-items: center;
+
+  padding: 14px 0;
+
+  border-bottom: 1px solid var(--line);
+
+}
+
+.interest span {
+
+  font-family: var(--f-mono);
+
+  font-size: 8px;
+
+  color: var(--tape);
+
+}
+
+.interest strong {
+
+  font-family: var(--f-display);
+
+  font-size: 17px;
+
+  font-weight: 480;
+
+  transition: transform .2s ease;
+
+}
+
+.interest:hover strong {
+
+  transform: translateX(6px);
+
+}
+
+
+/* ============================================================
+   OUTRO
+   ============================================================ */
+
+.about-outro {
+
+  position: relative;
+
+  z-index: 5;
+
+  max-width: var(--content-w);
+
+  margin: 0 auto;
+
+  padding:
+    0
+    var(--gutter)
+    120px;
+
+}
+
+.outro-line {
+
+  height: 1px;
+
+  background: var(--line-strong);
+
+}
+
+.outro-grid {
+
+  display: grid;
+
+  grid-template-columns: 1fr 2fr 1fr;
+
+  gap: 20px;
+
+  padding-top: 18px;
+
+}
+
+.outro-grid > span {
+
+  font-family: var(--f-mono);
+
+  font-size: 8px;
+
+  letter-spacing: 1.5px;
+
+  color: var(--ink-faint);
+
+}
+
+.outro-grid > span:last-child {
+
+  text-align: right;
+
+}
+
+.outro-grid p {
+
+  margin: 0;
+
+  font-family: var(--f-display);
+
+  font-size: 21px;
+
+  line-height: 1.15;
+
+}
+
+.outro-grid em {
+
+  color: var(--tape);
+
+  font-style: italic;
+
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 850px) {
+
+  .about-hero {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .about-spine {
+
+    display: none;
+
+  }
+
+  .signature-wrap {
+
+    position: absolute;
+
+    top: 145px;
+
+    right: var(--gutter);
+
+    width: 82px;
+    height: 82px;
+
+  }
+
+  .signature-ring {
+    width: 62px;
+    height: 62px;
+  }
+
+  .signature-core {
+    width: 50px;
+    height: 50px;
+  }
+
+  .signature-name {
+    font-size: 23px;
+  }
+
+  .signature-orbit span {
+    width: 82px;
+    font-size: 4px;
+  }
+
+  .origin-layout {
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+  }
+
+  .philosophy-layout {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .philosophy-index {
+
+    display: none;
+
+  }
+
+  .philosophy-note {
+
+    min-height: 120px;
+
+  }
+
+  .timeline {
+
+    margin-left: 0;
+
+  }
+
+  .beyond-layout {
+
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .about-hero {
+
+    padding-top: calc(var(--nav-h) + 65px);
+
+  }
+
+  .about-title {
+
+    font-size: clamp(3.8rem, 16vw, 6rem);
+
+  }
+
+  .about-title span {
+
+    margin-left: 8px;
+
+  }
+
+  .about-title em {
+
+    margin-left: 30px;
+
+  }
+
+  .about-intro-row {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .about-stamp {
+
+    display: none;
+
+  }
+
+  .about-section-head {
+
+    grid-template-columns: auto 1fr;
+
+  }
+
+  .about-section-code {
+
+    display: none;
+
+  }
+
+  .timeline-item {
+
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+
+    padding-left: 25px;
+
+  }
+
+  .timeline-year i {
+
+    left: -31px;
+
+  }
+
+  .quote-panel {
+
+    padding: 32px 25px;
+
+  }
+
+  .quote-footer {
+
+    flex-direction: column;
+
+    gap: 7px;
+
+  }
+
+  .outro-grid {
+
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+  .outro-grid p {
+
+    grid-column: 1 / -1;
+
+    grid-row: 1;
+
+  }
+
+  .outro-grid > span:last-child {
+
+    text-align: left;
+
+  }
+
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .signature-orbit,
+  .signature-dot {
+
+    animation: none;
+
+  }
+
+  .timeline-item {
+
+    opacity: 1;
+
+    transform: none;
+
+  }
+
+}
+
+
+/* ============================================================
+   SIGNATURE LAYER ADDITIONS
+   Matches the interaction language introduced in main.css:
+   staggered entrances + tactile hover on this page's own
+   panels (quote, philosophy note, interests).
+   ============================================================ */
+
+/* ---- Quote panel + philosophy note entrance ---- */
+
+.quote-panel,
+.philosophy-note {
+
+  opacity: 0;
+
+  transform: translateY(16px);
+
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.reveal.is-visible .quote-panel {
+
+  opacity: 1;
+  transform: none;
+}
+
+.reveal.is-visible .philosophy-note {
+
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.12s;
+}
+
+
+/* ---- Interest list: staggered entrance + tape-sheen row ---- */
+
+.interest {
+
+  position: relative;
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  transform: translateX(-10px);
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    padding-left 0.2s ease;
+
+  transition-delay: calc(var(--stagger, 0) * 90ms);
+}
+
+.reveal.is-visible .interest {
+
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.interest::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: var(--tape-soft);
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition: transform 0.3s ease;
+
+  z-index: -1;
+}
+
+.interest:hover::before {
+
+  transform: scaleX(1);
+}
+
+
+/* ---- Signature: gentle hover lift ---- */
+
+.signature-wrap {
+
+  transition: transform 0.3s ease;
+}
+
+.signature-wrap:hover {
+
+  transform: rotate(7deg) scale(1.04);
+}
+
+
+/* ---- Origin marker: tiny idle pulse on the tape-colored bar ---- */
+
+.origin-marker i:nth-child(2) {
+
+  animation: origin-pulse 3.4s ease-in-out infinite;
+}
+
+@keyframes origin-pulse {
+
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+
+
+/* ---- Stamp: subtle wobble on hover ---- */
+
+.about-stamp {
+
+  transition: transform 0.3s ease;
+}
+
+.about-stamp:hover {
+
+  transform: rotate(4deg) scale(1.06);
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+  .quote-panel,
+  .philosophy-note,
+  .interest {
+
+    opacity: 1;
+    transform: none;
+  }
+
+  .origin-marker i:nth-child(2) {
+
+    animation: none;
+  }
+
+}

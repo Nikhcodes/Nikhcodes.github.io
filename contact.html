@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Contact — Nikhiel Lingard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,350;0,9..144,480;0,9..144,560;1,9..144,400&family=Archivo:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="icon" type="image/png" href="./img/favicon.png">
+  <link rel="icon" href="./img/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="./img/favicon.png">
+
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/contact.css">
+</head>
+
+<body>
+
+  <div class="bg"></div>
+  <div class="mist"></div>
+  <div class="grain"></div>
+  <div class="scanlines"></div>
+
+
+  <!-- ======================================================
+       NAV
+  ======================================================= -->
+
+  <header class="top-panel" id="top-panel">
+
+    <a
+      href="./index.html"
+      class="wordmark"
+      aria-label="Go to homepage"
+    >
+      <span class="dot"></span>
+      Nikhiel Lingard
+    </a>
+
+    <nav class="links">
+      <a href="./index.html">Home</a>
+      <a href="./work.html">Work</a>
+      <a href="./about.html">About</a>
+      <a href="./contact.html" class="active">Contact</a>
+    </nav>
+
+    <div class="socials">
+      <a
+        href="https://github.com/Nikhcodes/"
+        target="_blank"
+        rel="noopener"
+      >
+        GitHub
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/nikhiel-lingard/"
+        target="_blank"
+        rel="noopener"
+      >
+        LinkedIn
+      </a>
+    </div>
+
+    <button
+      class="nav-toggle"
+      id="nav-toggle"
+      aria-label="Toggle navigation"
+    >
+      <span></span>
+      <span></span>
+    </button>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- ======================================================
+         HERO
+    ======================================================= -->
+
+    <section class="contact-hero">
+
+      <div class="contact-spine">
+        <span>SIDE D</span>
+        <span>TX / RX</span>
+        <span>NL—04</span>
+      </div>
+
+
+      <div class="contact-hero-main">
+
+        <div class="contact-meta">
+          <span>OPEN CHANNEL</span>
+          <span class="meta-rule"></span>
+          <span>TRANSMISSION / 2026</span>
+        </div>
+
+
+        <h1 class="contact-title">
+          Send a
+          <em>signal</em>
+        </h1>
+
+
+        <div class="contact-hero-bottom">
+
+          <p class="contact-sub">
+            Got a project, internship, collaboration, or strange idea
+            worth building? Open the channel.
+          </p>
+
+
+          <div class="receiver">
+
+            <div class="receiver-top">
+              <span>CHANNEL STATUS</span>
+              <span class="receiver-live">
+                <i></i>
+                OPEN
+              </span>
+            </div>
+
+            <div class="receiver-display">
+
+              <span class="receiver-frequency">
+                104.7
+              </span>
+
+              <span class="receiver-unit">
+                FM / NL
+              </span>
+
+              <div class="receiver-wave">
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+              </div>
+
+            </div>
+
+            <div class="receiver-bottom">
+              <span>READY TO RECEIVE</span>
+              <span>●</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="contact-mark">
+        <span>N</span>
+      </div>
+
+    </section>
+
+
+    <!-- ======================================================
+         TRANSMISSION
+    ======================================================= -->
+
+    <section class="transmission-section reveal">
+
+      <div class="section-head">
+
+        <div class="section-id">
+          <span class="section-number">D1</span>
+          <span>TRANSMISSION</span>
+        </div>
+
+        <span class="section-rule"></span>
+
+        <span class="section-code">
+          TX—FORM
+        </span>
+
+      </div>
+
+
+      <div class="contact-grid">
+
+
+        <!-- ==================================================
+             FORM
+        =================================================== -->
+
+        <div class="transmitter">
+
+          <div class="transmitter-head">
+
+            <div>
+              <span class="transmitter-label">
+                OUTGOING TRANSMISSION
+              </span>
+
+              <h2>
+                Start a conversation.
+              </h2>
+            </div>
+
+            <span class="transmitter-code">
+              001 / 003
+            </span>
+
+          </div>
+
+
+          <form
+            class="contact-form"
+            id="contact-form"
+          >
+
+            <label>
+              <span class="field-number">01</span>
+              <span class="field-name">Identity</span>
+
+              <input
+                type="text"
+                name="name"
+                autocomplete="name"
+                placeholder="Your name"
+                required
+              >
+            </label>
+
+
+            <label>
+              <span class="field-number">02</span>
+              <span class="field-name">Return frequency</span>
+
+              <input
+                type="email"
+                name="email"
+                autocomplete="email"
+                placeholder="you@example.com"
+                required
+              >
+            </label>
+
+
+            <label class="message-field">
+              <span class="field-number">03</span>
+              <span class="field-name">Transmission</span>
+
+              <textarea
+                name="message"
+                rows="7"
+                placeholder="Tell me what's on your mind..."
+                required
+              ></textarea>
+            </label>
+
+
+            <div class="form-bottom">
+
+              <button
+                type="submit"
+                id="transmit-button"
+              >
+                <span class="button-normal">
+                  Transmit signal
+                  <b>→</b>
+                </span>
+
+                <span class="button-loading">
+                  Transmitting
+                  <b>...</b>
+                </span>
+
+              </button>
+
+
+              <div class="transmission-bars" aria-hidden="true">
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+              </div>
+
+            </div>
+
+
+            <p
+              class="form-status"
+              id="form-status"
+              aria-live="polite"
+            ></p>
+
+          </form>
+
+        </div>
+
+
+        <!-- ==================================================
+             DIRECT CHANNELS
+        =================================================== -->
+
+        <aside class="contact-side">
+
+
+          <div class="direct-card">
+
+            <div class="direct-head">
+              <span>RX / 01</span>
+              <span>DIRECT CHANNEL</span>
+            </div>
+
+            <h3>
+              Skip the form.
+            </h3>
+
+            <p>
+              If you'd rather reach me directly,
+              these channels are always open.
+            </p>
+
+
+            <a
+              class="email-link"
+              href="mailto:nikhiel.lingard.dev@gmail.com"
+            >
+              nikhiel.lingard.dev@gmail.com
+            </a>
+
+
+            <div class="direct-links">
+
+              <a
+                href="https://github.com/Nikhcodes/"
+                target="_blank"
+                rel="noopener"
+              >
+                <span>GH</span>
+                GitHub
+                <b>↗</b>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/nikhiel-lingard/"
+                target="_blank"
+                rel="noopener"
+              >
+                <span>IN</span>
+                LinkedIn
+                <b>↗</b>
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- note -->
+
+          <div class="contact-note">
+
+            <span class="note-label">
+              NOTE / 02
+            </span>
+
+            <p>
+              I usually respond within a few days.
+              No elaborate pitch required — just tell me
+              what you're building.
+            </p>
+
+          </div>
+
+
+          <!-- signature -->
+
+          <div class="contact-signature">
+
+            <div class="signature-circle">
+              <span>N</span>
+            </div>
+
+            <div>
+              <span>TRANSMISSION ID</span>
+              <strong>NL—TX—2026</strong>
+            </div>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+
+    <!-- ======================================================
+         OUTRO
+    ======================================================= -->
+
+    <section class="contact-outro reveal">
+
+      <div class="outro-rule"></div>
+
+      <div class="outro-content">
+
+        <span>
+          D—END
+        </span>
+
+        <p>
+          Channel open.<br>
+          <em>Send something interesting.</em>
+        </p>
+
+        <span>
+          N.L / 2026
+        </span>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script src="./js/main.js"></script>
+  <script src="./js/contact.js"></script>
+
+</body>
+</html>
